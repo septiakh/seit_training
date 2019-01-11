@@ -5,7 +5,8 @@ require 'dotenv'
 
 
 #firefox
-#Capybara.default_driver = :chrome
+
+Capybara.default_driver = :chrome
 
 #chrome
 Capybara.register_driver :chrome do |app|
