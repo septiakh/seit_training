@@ -7,9 +7,8 @@ When("I click about button") do
 end
 
 Then("I should see about page") do
-  page.should have_content ("Tentang Moka POS")
+  page.should have_content('Tentang Moka POS')
 end
-
 
 When("I click pricing  button") do
   find("a#pricing-menu.text-center").click
@@ -49,8 +48,10 @@ end
 
 When("I click sign up button") do
    find(" a#signup-menu.btn-sign-up-now-header").click
+   sleep 5
 end
 
 Then("I should see sign up page") do
   page.should have_content ('Start your free 14-day trial now.')
+
 end

@@ -28,6 +28,7 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
+gem 'pry'
 
 # gem 'redis', '~> 4.0'
 
@@ -53,6 +54,19 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
+
+group :test do
+ gem 'cucumber-rails', require: false
+ # database_cleaner is not required, but highly recommended
+ gem 'database_cleaner'
+ gem 'curb', '~>0.9.3'
+ gem 'show_me_the_cookies'
+end
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.8'
+end
+
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
